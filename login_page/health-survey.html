@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>건강 정보 설문조사</title>
+    <link rel="stylesheet" href="/css/health-survey.css">
+</head>
+<body>
+    <div class="container">
+        <h2>건강 정보 설문조사</h2>
+        <form id="health-survey-form">
+            <label for="height">키 (cm):</label>
+            <input type="number" id="height" name="height" required>
+            
+            <label for="weight">몸무게 (kg):</label>
+            <input type="number" id="weight" name="weight" required>
+            
+            <label for="conditions">기존 질환:</label>
+            <input type="text" id="conditions" name="conditions">
+            
+            <label for="allergies">알레르기:</label>
+            <input type="text" id="allergies" name="allergies">
+            
+            <label for="alcohol">음주 여부:</label>
+            <select id="alcohol" name="alcohol" required>
+                <option value="yes">예</option>
+                <option value="no">아니오</option>
+            </select>
+            
+            <label for="smoking">담배 여부:</label>
+            <select id="smoking" name="smoking" required>
+                <option value="yes">예</option>
+                <option value="no">아니오</option>
+            </select>
+            
+            <label for="exercise">운동 습관:</label>
+            <input type="text" id="exercise" name="exercise">
+            
+            <label for="diet">식습관:</label>
+            <input type="text" id="diet" name="diet">
+            
+            <label for="sleep">수면 습관:</label>
+            <input type="text" id="sleep" name="sleep">
+            
+            <button type="submit">제출</button>
+        </form>
+    </div>
+</body>
+</html>

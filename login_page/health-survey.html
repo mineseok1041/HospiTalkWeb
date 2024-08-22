@@ -10,6 +10,16 @@
     <div class="container">
         <h2>건강 정보 설문조사</h2>
         <form id="health-survey-form">
+            <label for="gender">성별:</label>
+            <select id="gender" name="gender" required>
+                <option value="">선택하세요</option>
+                <option value="male">남성</option>
+                <option value="female">여성</option>
+            </select>
+
+            <label for="dob">생년월일:</label>
+            <input type="date" id="dob" name="dob" required>
+
             <label for="height">키 (cm):</label>
             <input type="number" id="height" name="height" required>
             

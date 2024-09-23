@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Bot Chat</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        function getResponse() {
+            event.preventDefault();
+            var message = $('#message').val();
+            console.log(message);
+            $.ajax({
+                url: 'http://127.0.0.1:5000/chat',
+                type: 'POST',
+                async: false,
+                dataType: "text",
+                data: {
+                    message: message
+                },
+                success: function(response) {
+                    $("#result").text(response);
+                    console.log(response);
+                }
+            });
+        }
+        
+    </script>
+</head>
+<body>
+    <form name="chat" method="post">
+        <input type="text" name="message" id="message" placeholder="Type your message here..." />
+        <button onclick="getResponse()">Send</button>
+    </form>
+    <span id="result"></span>
+</body>
+</html>
